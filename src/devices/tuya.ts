@@ -2290,6 +2290,7 @@ export const definitions: DefinitionWithExtend[] = [
             "_TZE200_ojzhk75b",
             "_TZE200_w4cryh2i",
             "_TZE200_dfxkcots",
+            "_TZE204_68utemio",
             "_TZE200_9i9dt8is",
             "_TZE200_ctq0k47x",
             "_TZE200_ebwgzdqq",
@@ -2341,6 +2342,7 @@ export const definitions: DefinitionWithExtend[] = [
             tuya.whitelabel("Moes", "ZS-SR-EUD-1", "Star ring smart dimmer switch 1 gang", ["_TZE204_hlx9tnzb"]),
             tuya.whitelabel("Moes", "MS-105Z", "Smart Dimmer module", ["_TZE200_la2c2uo9"]),
             tuya.whitelabel("Mercator Ikuü", "SSWM-DIMZ", "Switch Mechanism", ["_TZE200_9cxuhakf"]),
+            tuya.whitelabel("Zemismart", "ZN2S-US1-SD", "Single gang dimmer", ["_TZE204_68utemio"]),
             tuya.whitelabel("Mercator Ikuü", "SSWRM-ZB", "Rotary dimmer mechanism", ["_TZE200_a0syesf5"]),
             tuya.whitelabel("Lonsonho", "EDM-1ZBB-EU", "Smart Dimmer Switch", ["_TZE200_0nauxa0p"]),
             tuya.whitelabel("ION Industries", "ID200W-ZIGB", "LED Zigbee Dimmer", ["_TZE200_ykgar0ow"]),
@@ -2959,7 +2961,14 @@ export const definitions: DefinitionWithExtend[] = [
         },
     },
     {
-        fingerprint: tuya.fingerprint("TS0601", ["_TZE200_mwvfvw8g", "_TZE200_wnp4d4va", "_TZE200_cduqh1l0", "_TZE200_emxxanvi", "_TZE204_g4au0afs"]),
+        fingerprint: tuya.fingerprint("TS0601", [
+            "_TZE200_mwvfvw8g",
+            "_TZE200_wnp4d4va",
+            "_TZE200_cduqh1l0",
+            "_TZE200_emxxanvi",
+            "_TZE204_g4au0afs",
+            "_TZE204_w1wwxoja",
+        ]),
         model: "TS0601_switch_6_gang",
         vendor: "Tuya",
         description: "6 gang switch",
@@ -7847,7 +7856,7 @@ export const definitions: DefinitionWithExtend[] = [
                     "preset",
                     tuya.valueConverterBasic.lookup((_, device) => {
                         // https://github.com/Koenkk/zigbee2mqtt/issues/21353#issuecomment-1938328429
-                        if (["_TZE204_lzriup1j", "_TZE204_xnbkhhdr"].indexOf(device.manufacturerName) !== -1) {
+                        if (device.manufacturerName === "_TZE204_lzriup1j") {
                             return {
                                 auto: tuya.enum(1),
                                 manual: tuya.enum(0),
@@ -9601,7 +9610,7 @@ export const definitions: DefinitionWithExtend[] = [
         },
     },
     {
-        fingerprint: tuya.fingerprint("TS0601", ["_TZE200_3towulqd", "_TZE200_1ibpyhdc", "_TZE200_bh3n6gk8", "_TZE200_ttcovulf"]),
+        fingerprint: tuya.fingerprint("TS0601", ["_TZE200_3towulqd", "_TZE200_1ibpyhdc", "_TZE200_bh3n6gk8", "_TZE200_ttcovulf", "_TZE200_gjldowol"]),
         model: "ZG-204ZL",
         vendor: "Tuya",
         description: "Luminance motion sensor",
